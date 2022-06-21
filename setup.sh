@@ -25,15 +25,48 @@ echo "alias Documents=\"cd ~/Documents\"" >>~/.zshrc
 echo "alias Downloads=\"cd ~/Downloads\"" >>~/.zshrc
 echo "alias brews=\"brew update; brew upgrade; brew cleanup; brew autoremove; brew doctor\"" >>~/.zshrc
 
+# I believe none of these should require sudo
 
 echo -e "Installing brew casks\n"
+CASKS=(
+    adobe-creative-cloud
+    bitwarden
+    discord
+    firefox
+    fliqlo
+    iterm2
+    jetbrains-toolbox
+    libreoffice
+    libreoffice-language-pack
+    nextcloud
+    notion
+    qbittorrent
+    rectangle
+    spotify
+    visual-studio-code
+)
 
-#Install brew casks, I believe none of these should require sudo
-brew install adobe-creative-cloud bitwarden discord firefox fliqlo iterm2 jetbrains-toolbox libreoffice libreoffice-language-pack nextcloud notion qbittorrent rectangle spotify visual-studio-code
+brew cask install ${CASKS[@]}
+
 
 echo -e "Installing brew formulae\n"
-brew install elixir htop neofetch node speedtest-cli wifi-password 
+FORMULAE=(
+  chruby
+  elixir
+  htop
+  neofetch
+  node
+  rbenv
+  speedtest-cli
+  wifi-password
+)
 
+brew install ${FORMULAE[@]}
+
+echo -e "Changing ruby, to make gem work.\n"
+rbenv install 3.1.2
+rbenv global 3.1.2
+gem update --system
 
 echo -e "Installing powerlevel10k\n"
 brew install romkatv/powerlevel10k/powerlevel10k
