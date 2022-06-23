@@ -67,12 +67,12 @@ FORMULAE=(
 brew install ${FORMULAE[@]}
 
 # Installing a better ruby, I have had problems with gem on every Mac I've used
-
 echo -e "Changing ruby, to make gem work.\n"
 rbenv install 3.1.2
 rbenv global 3.1.2
 gem update --system
 
+# Installing powerlevel 10k, for a nice terminal
 echo -e "Installing powerlevel10k\n"
 brew install romkatv/powerlevel10k/powerlevel10k
 echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
