@@ -7,3 +7,8 @@ Also which commands that require sudo privledge is not completely certain (and I
 
 I want it to be a one command download everything deal.
 Still a work in progress.
+
+# Future additions
+Test the code in a macos VM
+Implement Java
+Make it ARM and x86 proof.
