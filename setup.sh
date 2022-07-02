@@ -13,7 +13,8 @@ xcode-select --install
 echo -e "Installing oh my zsh\n"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo -e "Installing homnebrew\n"
+echo -e "Installing homebrew\n"
+
 
 # Install brew
 arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -31,7 +32,7 @@ echo -e "Creating aliases\n"
 
 echo "#aliases" >>~/.zshrc
 echo "alias kth=\"cd ~/Documents/KTH/\"" >>~/.zshrc
-echo "alias Projects=\"cd ~/Documents/projects\"" >>~/.zshrc
+echo "alias Projects=\"cd ~/Documents/Projects\"" >>~/.zshrc
 echo "alias Documents=\"cd ~/Documents\"" >>~/.zshrc
 echo "alias Downloads=\"cd ~/Downloads\"" >>~/.zshrc
 echo "alias brews=\"brew update; brew upgrade; brew cleanup; brew autoremove; brew doctor\"" >>~/.zshrc
