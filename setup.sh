@@ -62,17 +62,17 @@ arch -x86_64 brew cask install ${CASKS[@]}
 # Installing brew formulae
 echo -e "Installing brew formulae\n"
 FORMULAE=(
-  chruby            # Not sure if this works on m1 
+  chruby
   elixir
   go
   htop              
-  neofetch          # Not sure if this works on m1
+  neofetch
   node              
   rbenv             
   rust               
-  speedtest-cli     # Not sure if this works on m1
+  speedtest-cli
   verilator        
-  wifi-password     # Not sure if this works on m1
+  wifi-password
 )
 
 arch -x86_64 brew install ${FORMULAE[@]}
